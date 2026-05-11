@@ -3,12 +3,14 @@ package com.jashwanth.nammashaaleinventory
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -165,7 +167,7 @@ fun TeacherDashboard(onNavigateToRegistration: () -> Unit, onViewAssets: () -> U
             Button(onClick = onViewAssets, modifier = Modifier
                 .fillMaxWidth()
                 .height(64.dp), colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)) {
-                Icon(Icons.Default.List, null); Spacer(Modifier.width(8.dp)); Text("Update Item Conditions")
+                Icon(Icons.AutoMirrored.Filled.List, null); Spacer(Modifier.width(8.dp)); Text("Update Item Conditions")
             }
             Spacer(Modifier.height(32.dp))
             TextButton(onClick = onLogout, modifier = Modifier.align(Alignment.CenterHorizontally)) { Text("Logout", color = Color.Red) }
