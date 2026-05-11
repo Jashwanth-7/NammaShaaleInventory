@@ -3,8 +3,6 @@ package com.jashwanth.nammashaaleinventory
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -14,8 +12,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -251,8 +247,7 @@ fun AssetRegistrationScreen(onAssetSaved: () -> Unit, onBack: () -> Unit, viewMo
     Scaffold(topBar = { TopAppBar(title = { Text("Register Asset") }, navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null) } }) }) { padding ->
         Column(Modifier
             .padding(padding)
-            .padding(16.dp)
-            .verticalArrangement(Arrangement.spacedBy(8.dp))) {
+            .padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedTextField(name, { name = it }, label = { Text("Item Name") }, modifier = Modifier.fillMaxWidth())
             OutlinedTextField(cat, { cat = it }, label = { Text("Category (e.g. Lab)") }, modifier = Modifier.fillMaxWidth())
             OutlinedTextField(sn, { sn = it }, label = { Text("Serial Number") }, modifier = Modifier.fillMaxWidth())
@@ -271,5 +266,3 @@ fun AssetRegistrationScreen(onAssetSaved: () -> Unit, onBack: () -> Unit, viewMo
         }
     }
 }
-
-private fun Modifier.verticalArrangement(arr: Arrangement.Vertical) = this // Helper for Column
