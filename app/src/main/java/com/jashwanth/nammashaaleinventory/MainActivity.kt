@@ -272,5 +272,4 @@ fun AssetRegistrationScreen(onAssetSaved: () -> Unit, onBack: () -> Unit, viewMo
     }
 }
 
-
 private fun Modifier.verticalArrangement(arr: Arrangement.Vertical) = this // Helper for Column
