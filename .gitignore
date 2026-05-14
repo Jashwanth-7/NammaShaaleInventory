@@ -13,3 +13,29 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Kotlin
+.kotlin
+
+# Log Files
+*.log
+
+# Android Studio generated
+.idea/
+*.apk
+*.ap_
+*.aab
+
+# Firebase
+google-services.json
+
+# Keystore files
+*.jks
+*.keystore
+
+# Temporary files
+*.tmp
+*.temp
+
+# Mac files
+Thumbs.db
